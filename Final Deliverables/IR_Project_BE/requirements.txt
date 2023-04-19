@@ -5,6 +5,7 @@ avro==1.11.1
 beautifulsoup4==4.12.1
 bidict==0.22.1
 blis==0.7.9
+branca==0.6.0
 cachetools==5.3.0
 catalogue==2.0.8
 certifi==2022.12.7
@@ -26,8 +27,11 @@ Flask==2.2.3
 Flask-Cors==3.0.10
 Flask-SocketIO==5.3.3
 flatbuffers==23.3.3
+folium==0.14.0
 gast==0.4.0
+geographiclib==2.0
 geopandas==0.12.2
+geopy==2.3.0
 google-auth==2.17.2
 google-auth-oauthlib==1.0.0
 google-pasta==0.2.0

@@ -3,6 +3,7 @@ import {BrowserRouter as Router,Routes,Route} from 'react-router-dom';
 import Login from './components/login';
 import Signup from './components/signup';
 import Notification from './components/notification';
+import NewNotification from './components/newNotification';
 
 
 
@@ -18,6 +19,7 @@ function App() {
     <Route path="/signup" element={<Signup/>} />
     <Route path="/" element={<Login/>} />
     <Route path="/notification" element={<Notification/>}/>
+    <Route path="/newnotification" element={<NewNotification/>}/>
 
   </Routes>
 

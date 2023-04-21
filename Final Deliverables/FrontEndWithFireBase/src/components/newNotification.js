@@ -1,9 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
-import AuthDetails from './authDetails';
-import earthquake from "../earthquake.png";
+
 import io from "socket.io-client";
 
-function Notification() {
+const NewNotification = () => {
   const iframeRef = useRef(null);
 
   const [message, setMessage] = useState("");
@@ -63,23 +62,10 @@ function Notification() {
       iframeDoc.close();
     }
   }, [map]);
+
   return (
-    <>
-    <div className="authLogo">
-      
-    <div className="logo">
-    <img src={earthquake} alt="Logo" />
-    <h3>Shaky</h3>
-    </div>
-    <AuthDetails/>
-    </div>
     <div className="bd">
-      <h2>Earthquake Hits </h2>
-      <ul>
-        
-        {locations.join(", ")}
-        
-      </ul>
+      <h2>Earthquake Hit in </h2>
       <div className="map">
         <iframe
           title="map"
@@ -88,12 +74,14 @@ function Notification() {
           height="500px"
         ></iframe>
       </div>
-      
+      <div>Message: {message}</div>
 
-      
+      <ul>
+        Locations:{locations.join(", ")}
+        
+      </ul>
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default Notification;
+export default NewNotification;

@@ -27,7 +27,7 @@ function AuthDetails() {
         }).catch(error => console.log(error))
     }
   return (
-    <div> {user ? <><p>{`Signed In as ${user.email}`}</p> <button onClick={userSignOut}>Sign Out</button>  </> : <p>Signed Out</p> }</div>
+    <div className='auth'> {user ? <><p>{`Signed In as ${user.email}`}</p> <button onClick={userSignOut}>Sign Out</button>  </> : <p>Signed Out</p> }</div>
   )
 }
 

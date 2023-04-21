@@ -46,11 +46,11 @@ def callMap():
     loc=loc_arr
     loc_arr=[]
     try:
-            html = createMap(loc)
+            html = createMap(loc, socketio)
             # html = createMap(loc_arr)
             # print(html)
             # print(msg.value.decode('utf-8'))
-            socketio.emit('locations',  html)
+            socketio.emit('map',  html)
     except Exception as e:
             print(e)
             print("An exception occurred")

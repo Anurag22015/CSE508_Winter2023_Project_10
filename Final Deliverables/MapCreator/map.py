@@ -12,7 +12,7 @@ location_his={}
 history_length = 12  
 global counter
 counter=0
-def createMap(locations):
+def createMap(locations, socketio):
     location_dict={}
     global counter
     # print(locations)
@@ -78,12 +78,13 @@ def createMap(locations):
         location_his.pop(oldest_interval)
 
     try:
-
+        temoLocation = []
         for location, count in location_map_cont.items():
                 lat = float(country[location]['latitude'])
                 lon = float(country[location]['longitude'])
                 popup = f"{location}: {count}"
                 if count>10:
+                    temoLocation.append(location)
                     folium.Marker(location=[lat, lon],popup=popup).add_to(folium_map)
     except Exception as e:
         print(e)
@@ -91,6 +92,7 @@ def createMap(locations):
     # Add the LayerControl to the map
     folium.LayerControl().add_to(folium_map)
     folium_map.save('map.html')
+    socketio.emit('locations',temoLocation)
     return(folium_map.get_root().render())
     # Save the map to an HTML file
     # folium_map.save('map.html')

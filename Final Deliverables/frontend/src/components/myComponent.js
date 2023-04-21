@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import io from "socket.io-client";
 import Notification from "./notification";
 
-function MyComponent() {
+function MyComponent(props) {
   const [message, setMessage] = useState("");
   const [locations, setLocations] = useState([]);
 

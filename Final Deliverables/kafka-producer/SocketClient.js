@@ -1,6 +1,6 @@
 const io = require("socket.io-client");
 
-const socket = io("http://127.0.0.1:5000", {
+const socket = io("http://127.0.0.1:8001", {
   extraHeaders: {
     Authorization: "Bearer ir",
   },
@@ -15,10 +15,13 @@ socket.on("message", (data) => {
 });
 
 socket.on("locations", (data) => {
-    console.log(data);
-  });
-  
-  socket.on("disconnect", (data) => {
-    console.log(data);
-  });
-  
+  console.log(data);
+});
+
+socket.on("map", (data) => {
+  // console.log(data);
+});
+
+socket.on("disconnect", (data) => {
+  console.log(data);
+});

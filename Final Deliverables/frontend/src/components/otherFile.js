@@ -64,9 +64,7 @@ export const html = `<!DOCTYPE html>
         
     
             var tile_layer_101de6a1a82229bc2a5617dfc7418938 = L.tileLayer(
-                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
-                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_46113f17546a5138496e8bd42ad5facf);
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png"            ).addTo(map_46113f17546a5138496e8bd42ad5facf);
         
     
             var fast_marker_cluster_99037675a7798111c533e10513d7a6ad = (function(){
@@ -1547,4 +1545,4 @@ export const html = `<!DOCTYPE html>
             ).addTo(map_46113f17546a5138496e8bd42ad5facf);
         
 </script>
-</html>`
+</html>`;

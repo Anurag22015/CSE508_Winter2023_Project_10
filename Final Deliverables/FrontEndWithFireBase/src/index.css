@@ -118,3 +118,26 @@ img{height: 50px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 20px;
 }
+.auth{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  float: right;
+  width: 37%;
+}
+.authLogo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ul{
+  color: orangered;
+}
+
+.map{
+  padding: 2%;
+}
+.bd h2{
+  margin: 2%;
+}

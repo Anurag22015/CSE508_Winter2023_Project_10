@@ -21,7 +21,7 @@ const Notification = () => {
 
   return (
     <div className="bd">
-      <h2>Earthquake Hit in </h2>
+      <h2>Earthquake Hits </h2>
       <div className="map">
         <iframe title="map" ref={iframeRef} width="100%" height="500px"></iframe>
       </div>

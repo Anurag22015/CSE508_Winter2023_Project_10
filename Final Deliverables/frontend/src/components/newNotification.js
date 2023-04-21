@@ -1,8 +1,13 @@
-import React, { useEffect, useState } from "react";
-import io from "socket.io-client";
-import Notification from "./notification";
+import React, { useState,useRef, useEffect } from 'react';
 
-function MyComponent(props) {
+
+import io from "socket.io-client";
+
+
+const NewNotification = () => {
+  
+  const iframeRef = useRef(null);
+
   const [message, setMessage] = useState("");
   const [locations, setLocations] = useState([]);
 
@@ -38,8 +43,25 @@ function MyComponent(props) {
       socket.disconnect();
     };
   }, []);
+
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+    //alert("Use effect is called");
+   
+    // Write the HTML string to the iframe document
+    if(locations){
+    iframeDoc.open();
+    iframeDoc.write(locations);
+    iframeDoc.close();}
+  }, []);
+
   return (
-    <div>
+    <div className="bd">
+      <h2>Earthquake Hit in </h2>
+      <div className="map">
+        <iframe title="map" ref={iframeRef} width="100%" height="500px"></iframe>
+      </div>
       <div>Message: {message}</div>
       
       
@@ -49,9 +71,9 @@ function MyComponent(props) {
           <li key={index}>{location}</li>
         ))} */}
       </ul>
-      
+     
     </div>
   );
-}
+};
 
-export default MyComponent;
+export default NewNotification;

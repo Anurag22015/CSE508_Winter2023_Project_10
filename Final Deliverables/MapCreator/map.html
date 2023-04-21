@@ -25,7 +25,11 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
+<<<<<<< Updated upstream
                 #map_81307c99aab88369c3af39e01430daae {
+=======
+                #map_dda81f439985b3e553bb75b7929f7fdf {
+>>>>>>> Stashed changes
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -39,14 +43,23 @@
 <body>
     
     
+<<<<<<< Updated upstream
             <div class="folium-map" id="map_81307c99aab88369c3af39e01430daae" ></div>
+=======
+            <div class="folium-map" id="map_dda81f439985b3e553bb75b7929f7fdf" ></div>
+>>>>>>> Stashed changes
         
 </body>
 <script>
     
     
+<<<<<<< Updated upstream
             var map_81307c99aab88369c3af39e01430daae = L.map(
                 "map_81307c99aab88369c3af39e01430daae",
+=======
+            var map_dda81f439985b3e553bb75b7929f7fdf = L.map(
+                "map_dda81f439985b3e553bb75b7929f7fdf",
+>>>>>>> Stashed changes
                 {
                     center: [0.0, 0.0],
                     crs: L.CRS.EPSG3857,
@@ -60,6 +73,7 @@
 
         
     
+<<<<<<< Updated upstream
             var tile_layer_8203efc2873989be54c315cfd8fa6587 = L.tileLayer(
                 "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
@@ -237,15 +251,33 @@
             var layer_control_c664796ffd5eac9e68acadf6aca7b2bf = {
                 base_layers : {
                     "cartodbdark_matter" : tile_layer_8203efc2873989be54c315cfd8fa6587,
+=======
+            var tile_layer_fe691bdf71558e4fa60636a7d885f084 = L.tileLayer(
+                "https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca target=\"_blank\" href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca target=\"_blank\" href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_dda81f439985b3e553bb75b7929f7fdf);
+        
+    
+            var layer_control_f8a8b50b643f1d23cb1887065ac5148b = {
+                base_layers : {
+                    "cartodbdark_matter" : tile_layer_fe691bdf71558e4fa60636a7d885f084,
+>>>>>>> Stashed changes
                 },
                 overlays :  {
                 },
             };
             L.control.layers(
+<<<<<<< Updated upstream
                 layer_control_c664796ffd5eac9e68acadf6aca7b2bf.base_layers,
                 layer_control_c664796ffd5eac9e68acadf6aca7b2bf.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
             ).addTo(map_81307c99aab88369c3af39e01430daae);
+=======
+                layer_control_f8a8b50b643f1d23cb1887065ac5148b.base_layers,
+                layer_control_f8a8b50b643f1d23cb1887065ac5148b.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_dda81f439985b3e553bb75b7929f7fdf);
+>>>>>>> Stashed changes
         
 </script>
 </html>

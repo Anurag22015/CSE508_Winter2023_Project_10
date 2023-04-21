@@ -1,17 +1,20 @@
-import React from 'react';
+import React from 'react'
+import AuthDetails from './authDetails';
+import earthquake from "../earthquake.png"
 
-const Notification = () => {
+function Notification() {
   return (
-    <div className="bd">
-      <h2>Earthquake Hit in </h2>
-      <div className="map" >
-        <iframe title="map" src="./map.html" width="100%" height="500px" marg></iframe>
-      </div>
+    <>
+    <div>
+      
+    <div className="logo">
+    <img src={earthquake} alt="Logo" />
+    <h3>Shaky</h3>
     </div>
-  );
+    <AuthDetails/>
+    </div>
+    </>
+  )
 }
 
 export default Notification;
-
-
-

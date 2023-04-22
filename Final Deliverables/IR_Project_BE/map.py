@@ -5,7 +5,7 @@ from geopy.geocoders import Nominatim
 
 def createMap(locations):
     # List of countries and cities
-    print(locations)
+    # print(locations)
     # Create the Folium map
     folium_map = folium.Map(location=[0, 0],
                             zoom_start=2, tiles='CartoDB dark_matter')

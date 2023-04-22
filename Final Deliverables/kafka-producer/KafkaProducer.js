@@ -37,16 +37,28 @@ function handleCountry(currentCountry) {
   var country = { id: line[0], event: line[1], source: line[2], text: line[3] };
   produceTestMessage(country);
   var delay = averageDelay + (Math.random() - 0.5) * spreadInDelay;
-  setTimeout(handleCountry.bind(null, currentCountry + 1), delay);
+  if (currentCountry < 96000)
+    setTimeout(handleCountry.bind(null, currentCountry + 1), delay);
+  else {
+    console.log("Hi");
+    setTimeout(handleCountry.bind(null, 1), delay);
+  }
 }
 
 function produceTestMessage(country) {
   (KeyedMessage = kafka.KeyedMessage),
     (countryKM = new KeyedMessage(country.code, JSON.stringify(country))),
-    (payloads = [{ topic: countriesTopic, messages: countryKM,groupId:'ir', partition: 0 }]);
+    (payloads = [
+      {
+        topic: countriesTopic,
+        messages: countryKM,
+        groupId: "ir",
+        partition: 0,
+      },
+    ]);
   if (countryProducerReady) {
     producer.send(payloads, function (err, data) {
-    //   console.log(data);
+      //   console.log(data);
     });
   } else {
     console.error(

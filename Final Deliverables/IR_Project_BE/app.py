@@ -21,7 +21,7 @@ def index():
 @socketio.on('connect')
 def handle_connect():
     auth_header = request.headers.get('Authorization')
-    print(auth_header)
+    # print(auth_header)
     token = auth_header.split(' ')[1] if auth_header else None
     
     # Authenticate client using token

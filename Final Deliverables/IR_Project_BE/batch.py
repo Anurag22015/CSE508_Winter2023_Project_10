@@ -66,7 +66,7 @@ def process_messages():
     df = pd.DataFrame(temp)
     result = predict(df)
     print(f"Fetched Batch Result" )
-    print(result)
+    # print(result)
     producer = KafkaProducer( bootstrap_servers=["localhost:9092"])
     value = json.dumps(result).encode('utf-8')
     producer.send("locations", value=value)

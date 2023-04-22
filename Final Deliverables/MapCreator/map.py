@@ -88,7 +88,7 @@ def createMap(locations, socketio):
                     folium.Marker(location=[lat, lon],popup=popup).add_to(folium_map)
     except Exception as e:
         print(e)
-    print(location_map_cont)
+    # print(location_map_cont)
     # Add the LayerControl to the map
     folium.LayerControl().add_to(folium_map)
     folium_map.save('map.html')

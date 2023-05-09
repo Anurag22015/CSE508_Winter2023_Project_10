@@ -6,13 +6,14 @@ import time
 from kafka import KafkaConsumer
 from threading import Thread
 from flask_socketio import SocketIO, emit
+from flask_cors import CORS
 from map import createMap
 loc_arr=[]
 interval = 30 
 app =   Flask(__name__)
 app.config['SECRET_KEY'] = 'ir'
 socketio = SocketIO(app, cors_allowed_origins='*')
-
+cors = CORS(app, resources={r"/*": {"origins": "*"}})
 
 @app.route('/')
 def index():
